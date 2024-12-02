@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'rider', 'as' => 'rider', 'middleware'=> []], function() {
     Route::controller(RiderInfoController::class)->group(function() {
-        Route::get('/store_location', 'store_rider_location')->name('store.location');
+        Route::post('/store_location', 'store_rider_location')->name('store.location');
         Route::get('/get_nearest', 'get_nearest_rider')->name('get.nearest');
     });
 });

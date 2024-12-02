@@ -24,7 +24,7 @@ class RiderLocationRequest extends FormRequest
         return [
             'lat' => 'required|numeric|min:0|max:90',
             'lon' => 'required|numeric|min:0|max:90',
-            'rider_username' => 'required|text'
+            'rider_username' => 'required'
         ];
     }
 }
